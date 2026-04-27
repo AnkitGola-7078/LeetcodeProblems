@@ -1,0 +1,22 @@
+class Solution {
+    public void rotate(int[] arr, int k) {
+        ArrayList<Integer> a=new ArrayList<>();
+        k=k%arr.length;
+        for(int i=arr.length-k;i<arr.length;i++){//[3,99,-1,-100]
+            a.add(arr[i]);
+        }
+        for(int j=0;j<arr.length-k;j++){
+            a.add(arr[j]);
+        }
+        for (int i = 0; i < arr.length; i++) {
+             arr[i] = a.get(i); 
+        } // Print the rotated array 
+        for (int num : arr) { 
+            System.out.print(num + "");
+        }
+             
+        
+    }
+}
+
+//https://leetcode.com/problems/rotate-array/submissions/1512363925/
